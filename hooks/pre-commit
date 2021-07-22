@@ -1,0 +1,15 @@
+#!/bin/sh
+
+case "${1}" in
+    --about )
+        ;;
+    * )
+        for file in $(git diff-index --cached --name-only HEAD | grep -E '\.(txt)') ; do
+            grep XYZ "${file}" >/dev/null
+            if [[ $? != 0 ]]; then
+                    echo Required tag not found
+                    exit 1
+            fi
+        done
+        ;;
+esac
