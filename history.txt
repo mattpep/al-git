@@ -1,0 +1,190 @@
+ 518  git remote add bb   git@bitbucket.org:automationlogic/git-tutorial.git
+  519  git remote -v
+  520  git lg
+  521  git show 92b569c
+  522  git lg 92b569c
+  523  git show 92b569c
+  524  git lg -l
+  525  git lg
+  526  git tag v1
+  527  git lg
+  528  git show v1
+  529  git show master
+  530  git lg --all
+  531  git show HEAD
+  532  git lg 
+  533  vim hello.txt
+  534  git add hello.txt 
+  535  git commit
+  536  git lg 
+  537  git show origin/master
+  538  git show master
+  539  git show 
+  540  git show HEAD
+  541  cd ../../github/ansible/
+  542  git lg
+  543  git show HEAD^^^^^
+  544  git show HEAD~10
+  545  git show HEAD~15
+  546  git show HEAD^^^^^^^^^^^^^^^
+  547  git show a9b4313570
+  548  git show HEAD~15
+  549  git -
+  550  cd -
+  551  git lg
+  552  git checkout v1
+  553  git checkout master
+  554  git master^
+  555  git checkout master^
+  556  git checkout master
+  557  git lg
+  558  git checkout v1
+  559  vim testing.txt
+  560  git add testing.txt 
+  561  git commit
+  562  git lg
+  563  git checkout -b new
+  564  git lg --all
+  565  git lg --all
+  566  git checkout master
+  567  git merge new
+  568  git lg
+  569  git branch -d new
+  570  git lg
+  571  git show a9b4313570
+  572  git show 05c27f5
+  573  cat testing.txt 
+  574  git lg
+  575  git checkout new
+  576  git lg
+  577  vim quotes.txt 
+  578  git checkout -b ver_a
+  579  vim quotes.txt 
+  580  git add quotes.txt 
+  581  git commit
+  582  git lg
+  583  git checkout master
+  584  git checkout -b ver_b
+  585  vim quotes.txt 
+  586  git lg
+  587  git status
+  588  git add quotes.txt 
+  589  git commit
+  590  git lg --all
+  591  git merge ver_a
+  592  vim quotes.txt 
+  593  git add quotes.txt 
+  594  git commit
+  595  git lg
+  596  git branch -d ver_a
+  597  git checkout master
+  598  git merge ver_b
+  599  git branch -d ver_b
+  600  git lg
+  601  git checkout -b left
+  602  vim quotes.txt 
+  603  git add quotes.txt 
+  604  git commit
+  605  git lg
+  606  git checkout master
+  607  git checkout -b right
+  608  vim quotes.txt 
+  609  git status
+  610  git add quotes.txt 
+  611  git commit
+  612  git lg
+  613  git lg 
+  614  git lg --all
+  615  git rebase left
+  616  vim quotes.txt 
+  617  git add quotes.txt 
+  618  git rebase --continue
+  619  git lg --all
+  620  git rebase -i left^
+  621  git rebase --continue
+  622  git rebase --abort
+  623  git rebase -i left^
+  624  git lg
+  625  git rebase -i master
+  626  git lg --all
+  627  git lg 
+  628  git show HEAD
+  629  git lg
+  630  git rebase -i master
+  631  git reflog
+  632  git lg
+  633  git status
+  634  touch magic.txt
+  635  git status
+  636  vim quotes.txt 
+  637  git status
+  638  git add quotes.txt magic.txt 
+  639  git status
+  640  git reset HEAD  quotes.txt
+  641  git status
+  642  git commit
+  643  git status
+  644  git diff
+  645  git stash
+  646  git status
+  647  vim magic.txt
+  648  git add magic.txt 
+  649  git commit
+  650  git lg
+  651  git stash pop
+  652  git diff
+  653  git stash list
+  654  git status
+  655  ls
+  656  ls hooks/
+  657  cp hooks/* .git/hooks/
+  658  vim testing.txt 
+  659  git add testing.txt 
+  660  git commit
+  661  vim testing.txt 
+  662  git add testing.txt 
+  663  git commit
+  664  vim .git/hooks/pre-commit
+  665  vim .git/hooks/commit-msg
+  666  git show
+  667  vim testing.txt 
+  668  git add testing.txt 
+  669  git commit
+  670  git show
+  671  cd .git/hooks/
+  672  ls -l
+  673  cd ..
+  674  ls -l
+  675  ls objects/
+  676  cd ..
+  677  git lg
+  678  git cat-file -p master
+  679  git cat-file -p 9ceee61b1dc2a8
+  680  git cat-file -p 1944fd61e7c53bcc19e6f3eb94cc800508944a25
+  681  git cat-file -p e83b013073e2a559df35ba678b1c68844054d38b
+  682  git cat-file -p 3de3685309155d4aa3e7591b98230c4b9df712c9
+  683  git cat-file -p 1944fd61e7c53bcc19e6f3eb94cc800508944a25
+  684  git lg
+  685  git cat-file -p 3de3685309155d4aa3e7591b98230c4b9df712c9
+  686  mkdir emptydire
+  687  mv emptydire/ emptydir
+  688  git add emptydir
+  689  git commit
+  690  git status
+  691  touch emptydir/.gitkeep
+  692  git status
+  693  git add emptydir/
+  694  git status
+  695  cd .git/
+  696  ls
+  697  cd objects/
+  698  ls
+  699  cd 19
+  700  ls
+  701  file 44fd61e7c53bcc19e6f3eb94cc800508944a2
+  702  less 44fd61e7c53bcc19e6f3eb94cc800508944a25 
+  703  ls -l
+  704  git cat-file -p 1944fd61e7c53bcc19e6f3eb94cc800508944a25
+  705  cat 44fd61e7c53bcc19e6f3eb94cc800508944a25
+  706  cat 44fd61e7c53bcc19e6f3eb94cc800508944a25 | hexdump -C
+
